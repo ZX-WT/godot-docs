@@ -44,7 +44,7 @@ From left to right in the toolbar:
   script shaders, it defines what built-in nodes will be available.
 - The following buttons and number input control the zooming level, grid
   snapping and distance between grid lines (in pixels).
-- The last icon shows the generated shader code corresponding to your graph.
+- The last icon is the ``Shader preview button`` shows the generated shader code corresponding to your graph.
 
 .. note::
 
@@ -53,7 +53,7 @@ From left to right in the toolbar:
     understanding of the shading pipeline.
 
     The visual shader graph is converted to a script shader behind the scene,
-    and you can see this code by pressing the last button in the toolbar. This
+    and you can see this code by pressing the ``Shader preview button`` button in the toolbar. This
     can be convenient to understand what a given node does and how to reproduce
     it in scripts.
 
@@ -89,6 +89,27 @@ the vector will take the value of the scalar.
 
 When connecting any ``vector`` output to a ``scalar`` input, the value of the
 scalar will be the average of the vector's components.
+
+Copy and Paste
+++++++++++++++
+
+Press Control+C/V to copy/paste nodes within the graph or between graphs (vertex/fragment/light). It works even for complex nodes such as Expressions. The result will be pasted under the cursor hotspot.
+
+.. image:: img/vs_copy_paste.gif
+
+Auto connection
++++++++++++++++
+
+When dragging the connection line from a port to an empty location, the node creation dialog will appear and if you use it to create a node, it will be automatically connected to that port.
+
+.. image:: img/vs_auto_connection.gif
+
+Drag & drop textures from FileSystem
+++++++++++++++++++++++++++++++++++++
+
+Drag and drop textures from the FileSystem dock to the graph will automatically create a ``Texture`` node with the associated texture for each dragged texture.
+
+.. image:: img/vs_texture_drop.gif
 
 Visual Shader nodes
 -------------------
